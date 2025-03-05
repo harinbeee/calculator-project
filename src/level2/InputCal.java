@@ -4,9 +4,12 @@ import java.util.Scanner;
 
 public class InputCal {
      // 콘솔에서 입력 받기
-
      private Scanner scanner = new Scanner(System.in);
-     Calculator calculator = new Calculator();// 캡슐화하기
+
+     private Manager manager;// 캡슐화하기
+     public InputCal (Calculator calculator) {
+          this.manager = new Manager(calculator);
+     }
 
      // 숫자
      public int number() {
@@ -22,12 +25,12 @@ public class InputCal {
 
                if(operator.equals("+") || operator.equals("-") || operator.equals("x") || operator.equals("/")) {
                     return operator;
-               } if(operator.equals("exit")) {
-                    System.out.println("==계산을 종료합니다==");
-                    System.exit(0);
                } if(operator.equals("ac")) {
-                    calculator.allClear();
-               } else {
+                    manager.allClear();
+                    return "allclear";
+               }if(operator.equals("exit")) {
+                    manager.exitCal();
+               }else {
                     System.out.print("잘못된 연산기호입니다. \n다시 ");
                }
           }

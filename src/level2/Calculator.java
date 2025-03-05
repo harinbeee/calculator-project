@@ -38,7 +38,7 @@ public class Calculator {
         return calRecord.toString();
     }
 
-    public void allClear() {
+    public void recordClear() {
         calRecord.setLength(0);
     }
 
