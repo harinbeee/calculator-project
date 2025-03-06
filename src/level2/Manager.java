@@ -4,7 +4,7 @@ public class Manager {
     private Calculator calculator;
 
     public Manager(Calculator calculator) {
-        this.calculator = calculator; // calculator를 관리하기 위해
+        this.calculator = calculator; // calculator를 관리
     }
 
     //  최근 연산 삭제 기능

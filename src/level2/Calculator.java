@@ -7,7 +7,7 @@ public class Calculator {
 
     // 1. 속성
     private List<String> calRecord = new ArrayList<>(); // 연산 내역 저장 (숫자 + 연산기호)
-    private boolean firstCal = true;
+    private boolean firstCal = true; // 첫 연산 여부를 가려준다
 
     // 2. 생성자
     public Calculator() {
@@ -67,7 +67,7 @@ public class Calculator {
         return String.join(" ", calRecord);
     }
 
-    // 최근 연산 삭제 메서드 (계산기의 CE )
+    // 최근 연산 삭제 메서드
     public void clearEntry() {
         if (calRecord.size() < 3) { // 최소 3개(숫자, 연산자, 숫자) 없으면 삭제 불가
             System.out.println("\n  ✔️ 삭제할 연산이 없습니다.");
